@@ -45,7 +45,7 @@ The library will download the url from web and load it on the view then cache it
 
 **Cache memory limitation**
 
-When the cached memory reach the limited value, the library will only load new urls without caching them, besides, all previous images will stay in the cache memory.
+When the cached memory reach the limited value, the library will only load new urls without caching them; besides, all previous images will stay in the cache memory.
 The default value is 128 mb, you can change it by calling **setCacheMemory_limit(int limitValue)** method:
 
 ```
@@ -61,7 +61,7 @@ You can clear the memory cache by calling **clearAllCache()** method:
 imageLoader.clearAllCache();
 ```
 
-while the image is being downloaded from the internet, The library will load default holder in the image container, the default holder is grey color, but that can be changed by calling **setDefaultDrawable(int res)** method:
+While the image is being downloaded from the internet, the library will load a default holder in the image container, the default holder is a grey color, but that can be changed by calling **setDefaultDrawable(int res)** method:
 
 ```
 imageLoader.setDefaultDrawable(R.drawable.res); // any resource from drawable or color values
