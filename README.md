@@ -20,6 +20,7 @@ _________
 - Custom Library named "MindvalleyLoader" has been developed and implemented to cache and load pictures from API.
 - The UI will display full name, categories, the number of likes, personal picture, cover picture and profile creation date.
 - Animation on cards element has been implemented.
+- Custom font has been implemented.
 - SwipeToRefresh view has been implemented to update the list.
 - Fab button has been implemented for auto smooth scrolling to the top of the list after reaching down elements
 - The URL "http://pastebin.com/raw/wgkJgazE" that the app uses doesn't support pagination; even thought paging mechanism and design has been implemented by calling the next page from the API when the user reaches the end of the list. Because pagination is not supported by the web service, API will return the same result again.
