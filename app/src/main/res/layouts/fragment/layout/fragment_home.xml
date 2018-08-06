@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:drawme="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/fragment_simple_recycler" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_button"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:borderWidth="0dp"
+            android:visibility="invisible"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="bottom|left"
+            android:src="@drawable/arrow_up_white"
+            android:layout_width="55dp"
+            app:fabSize="normal"
+            android:layout_height="55dp"
+            app:elevation="10dp">
+        </android.support.design.widget.FloatingActionButton>
+
+
+    </FrameLayout>
+
+</LinearLayout>

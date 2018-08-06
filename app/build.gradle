@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.mindvalleytestapp"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java','.apt_generated']
+            aidl.srcDirs = ['src/main/aidl','.apt_generated']
+            assets.srcDirs = ['src/main/assets']
+
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/activity',
+                            'src/main/res/layouts/adapter',
+                            'src/main/res/layouts/fragment',
+                            'src/main/res/layouts/toolbar',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
+
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:support-v13:27.0.2'
+    implementation 'com.android.support:animated-vector-drawable:27.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.android.support:customtabs:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+    // *********** UI ELEMENTS *********
+
+    // recycler
+    implementation 'com.android.support:cardview-v7:27.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+
+    // Circle Image
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    // Style views By Coding
+    implementation 'com.github.rafakob:DrawMe:0.1.6'
+
+
+    /// _____________________________________ ///
+
+
+    // ************** Animations *****************
+
+    // animation 
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+
+    // animation ViewAnimation (has scale animation)
+    implementation 'com.github.florent37:viewanimator:1.0.5'
+
+    /// _____________________________________ ///
+
+
+
+    // ************** Network *****************
+
+    // http connection
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+
+    /// _____________________________________ ///
+
+
+
+    // ************** Image Tools *****************
+
+    // Zooming Image
+    implementation 'com.ablanco.zoomy:zoomy:1.0.0'
+
+    /// _____________________________________
+
+
+
+    // ************** Toast & ProgressBar *****************
+
+    // Down Supertoasts // green white
+    implementation 'com.github.johnpersano:supertoasts:2.0'
+
+    // Material Progress
+    implementation 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+
+    // geometric Progress
+    implementation 'net.bohush.geometricprogressview:geometricprogressview:1.1.1'
+
+    // ************** Fixes *****************
+
+    // MultiDex
+    implementation 'com.android.support:multidex:1.0.3'
+
+
+    // ************** Test *****************
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    testImplementation 'org.powermock:powermock-module-junit4:1.6.2'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.2'
+    testImplementation 'com.github.fabioCollini.daggermock:daggermock:0.8.4'
+    testImplementation "org.robolectric:robolectric:3.8"
+
+    /// _____________________________________ ///
+
+    // ************** Liboutside *****************
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'io.reactivex:rxandroid:0.24.0'
+    implementation 'com.google.dagger:dagger-android:2.11'
+    implementation 'com.google.dagger:dagger-android-support:2.11'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+    testAnnotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /// _____________________________________ ///
+}

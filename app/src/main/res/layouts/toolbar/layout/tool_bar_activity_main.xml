@@ -1,0 +1,81 @@
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.Toolbar
+        android:animateLayoutChanges="true"
+        android:id="@+id/toolbar_main"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:layout_gravity="top"
+        android:fitsSystemWindows="true"
+        android:background="@color/blue_toolbar"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_main_frame"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- left -->
+
+            <FrameLayout
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.rafakob.drawme.DrawMeFrameLayout
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_left_logo_frame"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/small_logo_white"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                </com.rafakob.drawme.DrawMeFrameLayout>
+
+            </FrameLayout>
+
+            <!-- center -->
+
+            <com.rafakob.drawme.DrawMeFrameLayout
+                android:layout_centerInParent="true"
+                android:id="@+id/toolbar_frame_center"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFontBold
+                    android:padding="10dp"
+                    android:id="@+id/toolbar_txt_center"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:text="MindeValley Test App"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+            </com.rafakob.drawme.DrawMeFrameLayout>
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>
+
+
+

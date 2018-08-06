@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_marginTop="8dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/footer_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <net.bohush.geometricprogressview.GeometricProgressView
+            android:layout_width="35dp"
+            android:layout_gravity="center"
+            android:layout_height="35dp"
+            app:gp_type="kite"
+            app:gp_number_of_angles="10"
+            app:gp_color="@color/blue"
+            app:gp_duration="800"
+            app:gp_figure_padding="5dp" />
+    </FrameLayout>
+
+</LinearLayout>

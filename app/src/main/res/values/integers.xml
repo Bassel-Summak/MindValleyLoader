@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="loging_enroll_weight">3</integer>
+    <integer name="isTablet">0</integer>
+
+    <integer name="limit_username_low">3</integer>
+    <integer name="limit_username_high">25</integer>
+
+    <integer name="limit_email_high">50</integer>
+
+    <integer name="limit_password_low">6</integer>
+    <integer name="limit_password_high">30</integer>
+
+    <integer name="limit_name_low">6</integer>
+    <integer name="limit_name_high">30</integer>
+
+    <!--
+        <integer name="limit_password">6</integer>
+        <integer name="limit_email">25</integer>
+    -->
+
+</resources>

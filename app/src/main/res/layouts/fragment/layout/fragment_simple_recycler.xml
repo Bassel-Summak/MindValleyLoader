@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:isScrollContainer="false"
+    android:focusable="true"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:overScrollMode="never"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    xmlns:drawme="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/frg_swipe_torefresh"
+                    android:isScrollContainer="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:scrollbarThumbVertical="@color/white_transparent"
+                        android:overScrollMode="never"
+                        android:gravity="center"
+                        android:id="@+id/frg_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <com.github.rahatarmanahmed.cpv.CircularProgressView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="55dp"
+                    android:layout_gravity="center"
+                    app:cpv_color="@color/blue"
+                    android:layout_height="40dp"
+                    android:id="@+id/emptyView_progressbar_content"
+                    app:cpv_animAutostart="true"
+                    app:cpv_indeterminate="true" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/emptyView_retrying_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFont
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:text="@string/txt_no_internet_connection"
+                        android:layout_height="wrap_content" />
+
+                    <com.rafakob.drawme.DrawMeButton
+                        android:textSize="10sp"
+                        drawme:dm_radius="5dp"
+                        android:clickable="false"
+                        android:layout_marginTop="20dp"
+                        android:minHeight="0dp"
+                        drawme:dm_stroke="1dp"
+                        android:elevation="3dp"
+                        drawme:dm_font="@string/AppFont"
+                        android:background="@color/black"
+                        drawme:dm_backColor="@color/black"
+                        drawme:dm_backColorDisabled	="@color/black"
+                        android:padding="5dp"
+                        drawme:dm_strokeColor="@color/black"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:text="@string/txt_retrying"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:id="@+id/emptyView_nodata_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:padding="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/no_data_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+
+                            <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFont
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="4dp"
+                                android:id="@+id/emptyView_nodata_content_txt"
+                                android:layout_marginTop="20dp"
+                                android:background="@color/white"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:text="@string/txt_not_found"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

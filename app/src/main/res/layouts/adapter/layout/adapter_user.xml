@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="0dp"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
+        android:id="@+id/main_card"
+        app:cardPreventCornerOverlap="false"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/adapter_linear_personal_picture"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:elevation="3dp"
+                        android:id="@+id/adapter_image_personal_picture"
+                        android:clipToPadding="false"
+                        android:clipChildren="false"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@color/white"
+                        android:scaleType="centerCrop"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/adapter_linear_personal_picture"
+                    android:layout_toLeftOf="@+id/linear_likes_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="start"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFontBold
+                            android:layout_width="match_parent"
+                            android:text="Name"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_gravity="start"
+                            android:id="@+id/adapter_txt_name"
+                            android:layout_height="wrap_content" />
+
+                        <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFont
+                            android:layout_width="match_parent"
+                            android:text="category"
+                            android:textSize="12sp"
+                            android:textColor="@color/blue"
+                            android:gravity="start"
+                            android:layout_gravity="start"
+                            android:id="@+id/adapter_txt_categories"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/linear_likes_details"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFont
+                        android:layout_width="wrap_content"
+                        android:text="5"
+                        android:id="@+id/adapter_txt_likes_count"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="30dp"
+                        android:src="@drawable/like_icon"
+                        android:layout_height="30dp" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+            
+            <ImageView
+                android:id="@+id/adapter_image_content"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_image_height" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFont
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/adapter_user_profile_creation"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content" />
+
+                <com.mindvalleytestapp.custom_views.modified_views.TextViewWithFont
+                    android:layout_width="wrap_content"
+                    android:text="04-05-2018"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="start"
+                    android:id="@+id/adapter_txt_date"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        
+        
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

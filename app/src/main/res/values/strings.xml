@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Test App</string>
+
+
+    <!-- UI -->
+    <string name="adapter_user_profile_creation">This profile was created at: </string>
+
+    <!-- Font -->
+    <string name="AppFont">normal.ttf</string>
+    <string name="AppFont_Bold">bold.ttf</string>
+
+
+    <!-- Toolbar -->
+    <string name="toolbar_txt_center_app_details">MindValley Test App</string>
+
+    <!-- Button -->
+    <string name="txt_retrying">Retrying</string>
+
+    <!-- Toasts -->
+    <string name="txt_no_internet_connection">Make sure you have stable internet connection then try again</string>
+    <string name="txt_no_list_has_updated_successfully">List has been updated</string>
+
+    <!-- Errors -->
+    <string name="txt_not_found">No result is found!</string>
+
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mindvalleytestapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".application.BaseApplication"
+        android:supportsRtl="false"
+        android:allowBackup="false"
+        android:screenOrientation="portrait"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_launcher"
+        android:label="@string/app_name"
+        android:windowSoftInputMode="adjustPan"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        tools:replace="android:supportsRtl,android:allowBackup"
+        android:theme="@style/ActivityDefaultStyle"
+        >
+
+        <activity
+            android:name="com.mindvalleytestapp.ui.activity.MainActivityApp"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

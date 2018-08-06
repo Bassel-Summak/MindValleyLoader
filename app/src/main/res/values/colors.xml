@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2A8CFE</color>
+    <color name="colorPrimaryDark">#2065b6</color>
+    <color name="colorAccent">#18477e</color>
+    <color name="status_bar">#18477e</color>
+    <color name="blue">#2A8CFE</color>
+    <color name="blue_bright">#5ea9ff</color>
+    <color name="blue_toolbar">#1390C9</color>
+    <color name="gray_background">#E9E9E9</color>
+    <color name="gray_bright">#cccccc</color>
+    <color name="yellow">#FBB24A</color>
+    <color name="green">#09a917</color>
+    <color name="red">#C9182B</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white_transparent">#33636363</color>
+    <color name="white_gray">#797375</color>
+    <color name="thumbnail_gray">#797174</color>
+
+</resources>
