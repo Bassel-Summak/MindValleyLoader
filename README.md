@@ -1,5 +1,8 @@
-# MindValleyLoader
-MindValleyLoader is a simple demo application with a library to load images with users information from web service using JSON API and display them on Android device.
+# MindValleyLoader 
+MindValleyLoader is a simple demo application with a library to load images with users information from web service using JSON API and display them on Android device. 
+
+<img align="left" width="100" height="100" src="https://dl.dropboxusercontent.com/s/swu83qlijjo6bzp/app_launcher.png">
+
 
 **Links**
 
