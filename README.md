@@ -67,4 +67,4 @@ While the image is being downloaded from the internet, the library will load a d
 imageLoader.setDefaultDrawable(R.drawable.res); // any resource from drawable or color values
 ```
 
-*This app has been developed for MindValley as a test app*
+*This app has been developed just for demo purposes*
